@@ -8,6 +8,7 @@ import Capacity from './pages/Capacity';
 import Leadership from './pages/Leadership';
 import Careers from './pages/Careers';
 import Contact from './pages/Contact';
+import AdminUpload from './pages/AdminUpload';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="/direccion" element={<Leadership />} />
             <Route path="/trabaja" element={<Careers />} />
             <Route path="/contacto" element={<Contact />} />
+            <Route path="/admin/upload" element={<AdminUpload />} />
           </Routes>
         </main>
         <Footer />
