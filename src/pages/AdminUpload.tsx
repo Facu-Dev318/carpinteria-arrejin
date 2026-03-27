@@ -4,6 +4,7 @@ import { Upload, CheckCircle, XCircle, Loader } from 'lucide-react';
 
 interface FileUploadStatus {
   name: string;
+  uploadName: string;
   status: 'pending' | 'uploading' | 'success' | 'error';
   error?: string;
   url?: string;
@@ -13,12 +14,21 @@ export default function AdminUpload() {
   const [files, setFiles] = useState<FileUploadStatus[]>([]);
   const [uploading, setUploading] = useState(false);
 
+  const extractWAFileName = (fileName: string): string => {
+    const waMatch = fileName.match(/WA\d{4}\.jpg/i);
+    if (waMatch) {
+      return waMatch[0];
+    }
+    return fileName;
+  };
+
   const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const selectedFiles = event.target.files;
     if (!selectedFiles) return;
 
     const fileStatuses: FileUploadStatus[] = Array.from(selectedFiles).map(file => ({
       name: file.name,
+      uploadName: extractWAFileName(file.name),
       status: 'pending',
     }));
 
@@ -40,9 +50,11 @@ export default function AdminUpload() {
       ));
 
       try {
+        const uploadName = files[i].uploadName;
+
         const { data, error } = await supabase.storage
           .from('projects')
-          .upload(file.name, file, {
+          .upload(uploadName, file, {
             cacheControl: '3600',
             upsert: true,
           });
@@ -51,7 +63,7 @@ export default function AdminUpload() {
 
         const { data: urlData } = supabase.storage
           .from('projects')
-          .getPublicUrl(file.name);
+          .getPublicUrl(uploadName);
 
         setFiles(prev => prev.map((f, idx) =>
           idx === i ? {
@@ -137,6 +149,9 @@ export default function AdminUpload() {
 
                       <div className="flex-1">
                         <p className="text-sm font-medium">{file.name}</p>
+                        {file.name !== file.uploadName && (
+                          <p className="text-xs text-neutral-500 mt-0.5">→ {file.uploadName}</p>
+                        )}
                         {file.status === 'error' && file.error && (
                           <p className="text-xs text-red-600 mt-1">{file.error}</p>
                         )}
@@ -176,6 +191,7 @@ export default function AdminUpload() {
           <h3 className="font-medium text-blue-900 mb-2">Información</h3>
           <ul className="text-sm text-blue-800 space-y-1">
             <li>Las imágenes se subirán al bucket "projects" en Supabase Storage</li>
+            <li>Los archivos con formato IMG-20260326-WA0016.jpg se renombrarán automáticamente a WA0016.jpg</li>
             <li>Si un archivo con el mismo nombre existe, será reemplazado</li>
             <li>Las URLs públicas estarán disponibles inmediatamente</li>
             <li>Formatos recomendados: JPG, PNG, WebP</li>
