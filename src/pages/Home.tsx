@@ -39,7 +39,7 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-white mb-6 animate-fade-in-up leading-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-white mb-6 animate-fade-in-up leading-tight uppercase">
             Carpintería Arrejin
           </h1>
           <p
