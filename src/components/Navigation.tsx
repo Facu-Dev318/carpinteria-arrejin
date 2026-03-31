@@ -28,7 +28,6 @@ export default function Navigation() {
     { path: '/proyectos', label: 'Proyectos' },
     { path: '/filosofia', label: 'Filosofía' },
     { path: '/capacidad', label: 'Capacidad productiva' },
-    { path: '/direccion', label: 'Dirección' },
     { path: '/trabaja', label: 'Trabajá con nosotros' },
     { path: '/contacto', label: 'Contacto' },
   ];

@@ -34,7 +34,7 @@ export default function Projects() {
             className="text-lg lg:text-xl font-light text-stone-300 max-w-3xl leading-relaxed"
             style={{ animationDelay: '0.2s' }}
           >
-            Cada proyecto es una oportunidad para materializar arquitectura con precisión, sensibilidad y atención al detalle. Trabajamos con maderas nobles en desarrollos residenciales, hospitalidad y espacios corporativos.
+            Desarrollamos proyectos de carpintería entendiendo en profundidad la dinámica de una obra. Sabemos que cada decisión impacta en tiempos, costos y resultados, por eso trabajamos con precisión, planificación y materiales de alta calidad para garantizar ejecuciones confiables y duraderas.
           </p>
         </div>
       </section>

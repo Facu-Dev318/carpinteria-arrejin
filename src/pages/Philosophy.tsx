@@ -12,7 +12,7 @@ export default function Philosophy() {
             className="text-lg lg:text-xl font-light text-stone-300 max-w-3xl leading-relaxed"
             style={{ animationDelay: '0.2s' }}
           >
-            Somos una empresa familiar con 60 años de trayectoria que evolucionó desde el taller artesanal hacia una operación moderna, sin perder la esencia del trabajo bien hecho.
+            Hoy somos un equipo de 15 profesionales, entre ellos operarios, colocadores, arquitecta, diseñadora y electricista, que continúan trabajando cada proyecto con la misma dedicación que nos caracteriza desde el inicio.
           </p>
         </div>
       </section>
@@ -32,10 +32,7 @@ export default function Philosophy() {
                 Tradición que evoluciona
               </h2>
               <p className="text-lg font-light text-stone-700 leading-relaxed">
-                Fundada en 1964, Carpintería Arrejin nació como un pequeño taller familiar especializado en carpintería de obra. A lo largo de seis décadas, fuimos incorporando tecnología, expandiendo capacidades y refinando procesos, pero mantuvimos intacta nuestra filosofía: el respeto por la madera, la atención al detalle y el compromiso con cada proyecto.
-              </p>
-              <p className="text-lg font-light text-stone-700 leading-relaxed">
-                Hoy somos un equipo de 15 profesionales con maquinaria moderna, capacidad de producción industrial y alcance nacional, pero seguimos trabajando cada proyecto con la misma dedicación artesanal que nos caracterizó desde el inicio.
+                Hoy somos un equipo de 15 profesionales, entre ellos operarios, colocadores, arquitecta, diseñadora y electricista, que continúan trabajando cada proyecto con la misma dedicación que nos caracteriza desde el inicio.
               </p>
             </div>
           </div>
@@ -88,10 +85,7 @@ export default function Philosophy() {
                 Visión contemporánea
               </h2>
               <p className="text-lg font-light text-stone-700 leading-relaxed">
-                Nuestra meta es consolidarnos como el referente argentino en carpintería arquitectónica de alto nivel, siendo el socio de confianza para estudios de arquitectura, desarrolladores inmobiliarios y marcas de hospitalidad que buscan excelencia en madera.
-              </p>
-              <p className="text-lg font-light text-stone-700 leading-relaxed">
-                Estamos invirtiendo en tecnología, ampliando capacidad productiva y formando un equipo técnico de primer nivel para acompañar proyectos cada vez más ambiciosos y complejos, sin perder nunca la esencia artesanal y el trato personalizado que nos define.
+                Nuestra meta es consolidarnos como un referente en carpintería de diseño, y construir relaciones a largo plazo, convirtiéndonos en el aliado confiable para arquitectos, desarrolladores y clientes que buscan resultados de calidad.
               </p>
             </div>
             <div className="relative aspect-[4/5] overflow-hidden order-1 lg:order-2">
@@ -105,17 +99,6 @@ export default function Philosophy() {
         </div>
       </section>
 
-      <section className="py-16 lg:py-24 bg-stone-50">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-light text-stone-900 mb-8">
-            "La madera es un material noble que exige respeto, conocimiento y paciencia.<br />
-            Cada pieza tiene su historia, y nuestro trabajo es honrarla."
-          </h2>
-          <p className="text-lg text-stone-600 font-light">
-            Renzo Arrejin, Director
-          </p>
-        </div>
-      </section>
     </div>
   );
 }

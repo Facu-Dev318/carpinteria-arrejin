@@ -5,7 +5,6 @@ import Home from './pages/Home';
 import Projects from './pages/Projects';
 import Philosophy from './pages/Philosophy';
 import Capacity from './pages/Capacity';
-import Leadership from './pages/Leadership';
 import Careers from './pages/Careers';
 import Contact from './pages/Contact';
 import AdminUpload from './pages/AdminUpload';
@@ -21,7 +20,6 @@ function App() {
             <Route path="/proyectos" element={<Projects />} />
             <Route path="/filosofia" element={<Philosophy />} />
             <Route path="/capacidad" element={<Capacity />} />
-            <Route path="/direccion" element={<Leadership />} />
             <Route path="/trabaja" element={<Careers />} />
             <Route path="/contacto" element={<Contact />} />
             <Route path="/admin/upload" element={<AdminUpload />} />

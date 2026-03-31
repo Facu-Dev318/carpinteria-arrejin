@@ -1,19 +1,13 @@
-import { Cog, Users, Truck, Ruler, Factory, CheckCircle } from 'lucide-react';
+import { Users, Ruler, Factory, CheckCircle } from 'lucide-react';
 
 export default function Capacity() {
   return (
     <div className="min-h-screen pt-20 lg:pt-24">
       <section className="py-16 lg:py-24 bg-stone-900 text-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <h1 className="text-5xl lg:text-7xl font-light mb-8 animate-fade-in-up">
-            Capacidad productiva
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-light animate-fade-in-up text-center">
+            Capacidad productiva para obras simultáneas
           </h1>
-          <p
-            className="text-lg lg:text-xl font-light text-stone-300 max-w-3xl leading-relaxed"
-            style={{ animationDelay: '0.2s' }}
-          >
-            Combinamos infraestructura moderna, equipo técnico especializado y procesos optimizados para ejecutar proyectos arquitectónicos de alta complejidad con tiempos de respuesta competitivos.
-          </p>
         </div>
       </section>
 
@@ -32,10 +26,7 @@ export default function Capacity() {
                 Infraestructura moderna
               </h2>
               <p className="text-lg font-light text-stone-700 leading-relaxed">
-                Nuestro taller en Isidro Casanova cuenta con más de 1.200m² equipados con maquinaria de última generación para corte, cepillado, ensamblado y terminación. Trabajamos con sistemas CNC para piezas de alta precisión y mantenemos equipamiento tradicional para trabajos artesanales específicos.
-              </p>
-              <p className="text-lg font-light text-stone-700 leading-relaxed">
-                La combinación de tecnología avanzada y conocimiento artesanal nos permite ejecutar desde detalles arquitectónicos complejos hasta producción seriada de elementos modulares con la misma excelencia.
+                Capacidad productiva preparada para proyectos complejos.
               </p>
             </div>
           </div>
@@ -53,31 +44,11 @@ export default function Capacity() {
 
             <div className="space-y-4">
               <div className="inline-flex items-center justify-center w-14 h-14 bg-stone-100 text-stone-800 rounded-full">
-                <Cog size={24} />
-              </div>
-              <h3 className="text-2xl font-light text-stone-900">Maquinaria CNC</h3>
-              <p className="text-stone-600 font-light leading-relaxed">
-                Equipamiento de precisión para cortes complejos, tallados, fresados y mecanizados que garantizan exactitud milimétrica.
-              </p>
-            </div>
-
-            <div className="space-y-4">
-              <div className="inline-flex items-center justify-center w-14 h-14 bg-stone-100 text-stone-800 rounded-full">
                 <Users size={24} />
               </div>
               <h3 className="text-2xl font-light text-stone-900">15 profesionales</h3>
               <p className="text-stone-600 font-light leading-relaxed">
                 Equipo multidisciplinario: maestros carpinteros, operarios especializados, técnicos en terminación y personal de montaje.
-              </p>
-            </div>
-
-            <div className="space-y-4">
-              <div className="inline-flex items-center justify-center w-14 h-14 bg-stone-100 text-stone-800 rounded-full">
-                <Truck size={24} />
-              </div>
-              <h3 className="text-2xl font-light text-stone-900">Alcance nacional</h3>
-              <p className="text-stone-600 font-light leading-relaxed">
-                Logística propia y red de colaboradores para ejecutar proyectos en todo el territorio argentino con montaje profesional.
               </p>
             </div>
 
@@ -139,9 +110,6 @@ export default function Capacity() {
       <section className="py-16 lg:py-24 bg-stone-900 text-white">
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <div className="text-center space-y-8">
-            <h2 className="text-3xl lg:text-4xl font-light">
-              Capacidad para proyectos complejos y múltiples obras simultáneas
-            </h2>
             <p className="text-lg font-light text-stone-300 leading-relaxed">
               Nuestra estructura productiva nos permite gestionar varios proyectos de manera paralela sin comprometer plazos ni calidad. Trabajamos regularmente con estudios de arquitectura y desarrolladores en obras de mediana y gran escala.
             </p>
