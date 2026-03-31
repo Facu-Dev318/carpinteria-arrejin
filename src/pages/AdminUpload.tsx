@@ -13,6 +13,7 @@ interface FileUploadStatus {
 export default function AdminUpload() {
   const [files, setFiles] = useState<FileUploadStatus[]>([]);
   const [uploading, setUploading] = useState(false);
+  const [category, setCategory] = useState('cocinas');
 
   const extractWAFileName = (fileName: string): string => {
     const waMatch = fileName.match(/WA\d{4}\.jpg/i);
@@ -51,10 +52,11 @@ export default function AdminUpload() {
 
       try {
         const uploadName = files[i].uploadName;
+        const uploadPath = `${category}/${uploadName}`;
 
         const { data, error } = await supabase.storage
           .from('projects')
-          .upload(uploadName, file, {
+          .upload(uploadPath, file, {
             cacheControl: '3600',
             upsert: true,
           });
@@ -63,7 +65,7 @@ export default function AdminUpload() {
 
         const { data: urlData } = supabase.storage
           .from('projects')
-          .getPublicUrl(uploadName);
+          .getPublicUrl(uploadPath);
 
         setFiles(prev => prev.map((f, idx) =>
           idx === i ? {
@@ -101,6 +103,26 @@ export default function AdminUpload() {
         </div>
 
         <form onSubmit={uploadFiles} className="bg-white rounded-lg shadow-sm p-8 mb-8">
+          <div className="mb-6">
+            <label className="block text-sm font-medium text-neutral-700 mb-2">
+              Categoría de destino
+            </label>
+            <select
+              value={category}
+              onChange={(e) => setCategory(e.target.value)}
+              disabled={uploading}
+              className="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-neutral-900 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              <option value="cocinas">Cocinas</option>
+              <option value="revestimientos">Revestimientos</option>
+              <option value="escaleras">Escaleras</option>
+              <option value="puertas">Puertas</option>
+              <option value="vanitory">Vanitory</option>
+              <option value="bibliotecas">Bibliotecas y repisas</option>
+              <option value="vestidor">Vestidor</option>
+            </select>
+          </div>
+
           <div className="mb-6">
             <label className="block mb-4">
               <div className="flex items-center justify-center w-full h-32 border-2 border-dashed border-neutral-300 rounded-lg hover:border-neutral-400 transition-colors cursor-pointer">
@@ -190,7 +212,7 @@ export default function AdminUpload() {
         <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
           <h3 className="font-medium text-blue-900 mb-2">Información</h3>
           <ul className="text-sm text-blue-800 space-y-1">
-            <li>Las imágenes se subirán al bucket "projects" en Supabase Storage</li>
+            <li>Las imágenes se subirán al bucket "projects" en la subcarpeta seleccionada (ej: projects/cocinas/)</li>
             <li>Los archivos con formato IMG-20260326-WA0016.jpg se renombrarán automáticamente a WA0016.jpg</li>
             <li>Si un archivo con el mismo nombre existe, será reemplazado</li>
             <li>Las URLs públicas estarán disponibles inmediatamente</li>
