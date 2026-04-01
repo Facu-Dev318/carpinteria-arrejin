@@ -1,6 +1,20 @@
 import { Users, Ruler, Factory, CheckCircle } from 'lucide-react';
+import { useEffect, useState } from 'react';
+
+const capacidadImages: string[] = [];
 
 export default function Capacity() {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    if (capacidadImages.length > 1) {
+      const interval = setInterval(() => {
+        setCurrentImageIndex(prev => (prev + 1) % capacidadImages.length);
+      }, 4000);
+      return () => clearInterval(interval);
+    }
+  }, []);
+
   return (
     <div className="min-h-screen pt-20 lg:pt-24">
       <section className="py-16 lg:py-24 bg-stone-900 text-white">
@@ -14,19 +28,31 @@ export default function Capacity() {
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
-            <div className="relative aspect-[4/5] overflow-hidden">
-              <img
-                src="https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                alt="Taller de carpintería"
-                className="w-full h-full object-cover"
-              />
+            <div className="relative aspect-[4/5] overflow-hidden bg-stone-900 flex items-center justify-center">
+              {capacidadImages.length === 0 ? (
+                <div className="text-center px-8">
+                  <p className="text-stone-400 font-light text-lg">Fotos del taller</p>
+                  <p className="text-stone-500 font-light text-sm mt-2">próximamente</p>
+                </div>
+              ) : (
+                capacidadImages.map((image, index) => (
+                  <img
+                    key={index}
+                    src={image}
+                    alt={`Taller - ${index + 1}`}
+                    className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+                      index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+                    }`}
+                  />
+                ))
+              )}
             </div>
             <div className="space-y-6">
               <h2 className="text-4xl lg:text-5xl font-light text-stone-900">
                 Infraestructura moderna
               </h2>
               <p className="text-lg font-light text-stone-700 leading-relaxed">
-                Capacidad productiva preparada para proyectos complejos.
+                Contamos con un taller equipado con maquinaria de precisión y procesos optimizados que nos permiten abordar proyectos de alta complejidad con eficiencia y calidad constante. Nuestra infraestructura integra tecnología, experiencia técnica y control en cada etapa productiva, garantizando resultados precisos y cumplimiento riguroso de los plazos.
               </p>
             </div>
           </div>

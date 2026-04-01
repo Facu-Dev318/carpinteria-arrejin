@@ -12,10 +12,10 @@ export default function Footer() {
           <div className="space-y-6 lg:col-span-1">
             <Logo variant="light" className="h-20 w-auto" />
             <p className="text-xs font-light text-stone-400 leading-relaxed uppercase tracking-wider">
-              Carpintería arquitectónica premium
+              Carpintería artesanal de alta calidad
             </p>
             <p className="text-sm font-light text-stone-400 leading-relaxed">
-              Tres generaciones dedicadas a la excelencia en madera para proyectos de alto nivel en toda Argentina.
+              Tres generaciones dedicadas a la excelencia en madera para proyectos de alto nivel en toda la provincia de Buenos Aires.
             </p>
           </div>
 
