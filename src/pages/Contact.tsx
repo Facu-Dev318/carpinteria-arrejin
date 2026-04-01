@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, MessageCircle } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
 
 export default function Contact() {
   return (
@@ -26,24 +26,6 @@ export default function Contact() {
                   Información de contacto
                 </h2>
                 <div className="space-y-6">
-                  <a
-                    href="https://wa.me/5491135807288"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-start space-x-4 p-6 bg-stone-50 hover:bg-stone-100 transition-colors duration-300 group"
-                  >
-                    <MessageCircle size={24} className="text-stone-800 flex-shrink-0 mt-1 group-hover:scale-110 transition-transform duration-300" />
-                    <div>
-                      <h3 className="text-lg font-normal text-stone-900 mb-2">WhatsApp</h3>
-                      <p className="text-stone-600 font-light">
-                        +54 11 3580-7288
-                      </p>
-                      <p className="text-sm text-stone-500 font-light mt-1">
-                        Renzo Arrejin - Respuesta inmediata en horario comercial
-                      </p>
-                    </div>
-                  </a>
-
                   <a
                     href="mailto:carpinteria.arrejin@gmail.com"
                     className="flex items-start space-x-4 p-6 bg-stone-50 hover:bg-stone-100 transition-colors duration-300 group"
@@ -102,7 +84,7 @@ export default function Contact() {
             <div className="space-y-8">
               <div className="aspect-square bg-stone-200 overflow-hidden">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3278.8668!2d-58.6!3d-34.7!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDQyJzAwLjAiUyA1OMKwMzYnMDAuMCJX!5e0!3m2!1ses-419!2sar!4v1234567890"
+                  src="https://www.google.com/maps?q=Dumont+636,+Isidro+Casanova,+Buenos+Aires,+Argentina&output=embed"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

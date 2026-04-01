@@ -15,11 +15,11 @@ export default function Projects() {
   const [projects, setProjects] = useState<Project[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState<string>('cocinas');
-  const [currentImageIndices, setCurrentImageIndices] = useState<Record<string, number>>({});
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [lightboxOpen, setLightboxOpen] = useState(false);
-  const [lightboxProject, setLightboxProject] = useState<Project | null>(null);
   const [lightboxImageIndex, setLightboxImageIndex] = useState(0);
-  const [slideshowPaused, setSlideshowPaused] = useState<Record<string, boolean>>({});
+  const [slideshowPaused, setSlideshowPaused] = useState(false);
+  const [allCategoryImages, setAllCategoryImages] = useState<string[]>([]);
 
   useEffect(() => {
     loadProjects();
@@ -33,53 +33,42 @@ export default function Projects() {
 
     if (data && !error) {
       setProjects(data);
-      const initialIndices: Record<string, number> = {};
-      data.forEach(project => {
-        initialIndices[project.id] = 0;
-      });
-      setCurrentImageIndices(initialIndices);
     }
     setIsLoading(false);
   };
 
   useEffect(() => {
-    const intervals: Record<string, NodeJS.Timeout> = {};
-
-    projects.forEach(project => {
-      if (project.images.length > 1 && !slideshowPaused[project.id]) {
-        intervals[project.id] = setInterval(() => {
-          setCurrentImageIndices(prev => ({
-            ...prev,
-            [project.id]: ((prev[project.id] || 0) + 1) % project.images.length
-          }));
-        }, 3000);
-      }
+    const categoryProjects = projects.filter(p => p.category === selectedCategory || (selectedCategory === 'bibliotecas' && p.category === 'bibliotecas y repisas'));
+    const images: string[] = [];
+    categoryProjects.forEach(project => {
+      images.push(...project.images);
     });
+    setAllCategoryImages(images);
+    setCurrentImageIndex(0);
+  }, [selectedCategory, projects]);
 
-    return () => {
-      Object.values(intervals).forEach(interval => clearInterval(interval));
-    };
-  }, [projects, slideshowPaused]);
+  useEffect(() => {
+    if (allCategoryImages.length > 1 && !slideshowPaused) {
+      const interval = setInterval(() => {
+        setCurrentImageIndex(prev => (prev + 1) % allCategoryImages.length);
+      }, 3000);
+      return () => clearInterval(interval);
+    }
+  }, [allCategoryImages, slideshowPaused]);
 
-  const openLightbox = (project: Project, imageIndex: number) => {
-    setLightboxProject(project);
+  const openLightbox = (imageIndex: number) => {
     setLightboxImageIndex(imageIndex);
     setLightboxOpen(true);
-    setSlideshowPaused(prev => ({ ...prev, [project.id]: true }));
+    setSlideshowPaused(true);
   };
 
   const closeLightbox = () => {
     setLightboxOpen(false);
-    if (lightboxProject) {
-      setSlideshowPaused(prev => ({ ...prev, [lightboxProject.id]: false }));
-    }
+    setSlideshowPaused(false);
     setTimeout(() => {
-      setLightboxProject(null);
       setLightboxImageIndex(0);
     }, 300);
   };
-
-  const categoryProjects = projects.filter(p => p.category === selectedCategory);
 
   return (
     <div className="min-h-screen pt-20 lg:pt-24">
@@ -130,81 +119,50 @@ export default function Projects() {
               </div>
 
               <div className="lg:col-span-9">
-                {categoryProjects.length === 0 ? (
+                {allCategoryImages.length === 0 ? (
                   <div className="bg-stone-900 p-12 text-center">
                     <p className="text-stone-400 font-light text-lg">
                       No hay proyectos disponibles en esta categoría.
                     </p>
                   </div>
                 ) : (
-                  <div className="grid grid-cols-1 gap-8">
-                    {categoryProjects.map((project) => {
-                      const currentImageIndex = currentImageIndices[project.id] || 0;
-                      const currentImage = project.images[currentImageIndex] || project.images[0];
-
-                      return (
-                        <div
-                          key={project.id}
-                          className="bg-stone-900 overflow-hidden group"
-                        >
-                          <div className="grid grid-cols-1 md:grid-cols-5">
+                  <div className="bg-stone-900 overflow-hidden">
+                    <div
+                      className="relative aspect-video cursor-pointer"
+                      onClick={() => openLightbox(currentImageIndex)}
+                    >
+                      {allCategoryImages.map((image, imgIndex) => (
+                        <img
+                          key={imgIndex}
+                          src={image}
+                          alt={`${selectedCategory} - ${imgIndex + 1}`}
+                          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${
+                            imgIndex === currentImageIndex ? 'opacity-100' : 'opacity-0'
+                          }`}
+                        />
+                      ))}
+                      <div className="absolute inset-0 bg-gradient-to-t from-stone-900/60 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-500" />
+                      {allCategoryImages.length > 1 && (
+                        <div className="absolute bottom-4 right-4 flex space-x-1">
+                          {allCategoryImages.map((_, idx) => (
                             <div
-                              className="md:col-span-3 relative aspect-video md:aspect-[4/3] overflow-hidden cursor-pointer"
-                              onClick={() => openLightbox(project, currentImageIndex)}
-                            >
-                              {project.images.length > 1 ? (
-                                <div className="relative w-full h-full">
-                                  {project.images.map((image, imgIndex) => (
-                                    <img
-                                      key={imgIndex}
-                                      src={image}
-                                      alt={`${project.title} - ${imgIndex + 1}`}
-                                      className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${
-                                        imgIndex === currentImageIndex ? 'opacity-100' : 'opacity-0'
-                                      }`}
-                                    />
-                                  ))}
-                                  <div className="absolute inset-0 bg-gradient-to-t from-stone-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                                  <div className="absolute bottom-4 right-4 flex space-x-1">
-                                    {project.images.map((_, idx) => (
-                                      <div
-                                        key={idx}
-                                        className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                                          idx === currentImageIndex ? 'bg-white w-6' : 'bg-white/50'
-                                        }`}
-                                      />
-                                    ))}
-                                  </div>
-                                </div>
-                              ) : (
-                                <>
-                                  <img
-                                    src={currentImage}
-                                    alt={project.title}
-                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                                  />
-                                  <div className="absolute inset-0 bg-gradient-to-t from-stone-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                                </>
-                              )}
-                            </div>
-                            <div className="md:col-span-2 p-8 flex flex-col justify-center space-y-4">
-                              <h2 className="text-3xl font-light text-white">
-                                {project.title}
-                              </h2>
-                              <div className="space-y-2 text-sm text-stone-400 font-light">
-                                <p>{project.typology}</p>
-                                <p>{project.location} · {project.year}</p>
-                              </div>
-                              {project.description && (
-                                <p className="text-stone-300 font-light leading-relaxed pt-4">
-                                  {project.description}
-                                </p>
-                              )}
-                            </div>
-                          </div>
+                              key={idx}
+                              className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                                idx === currentImageIndex ? 'bg-white w-6' : 'bg-white/50'
+                              }`}
+                            />
+                          ))}
                         </div>
-                      );
-                    })}
+                      )}
+                    </div>
+                    <div className="p-8 text-center">
+                      <h2 className="text-3xl font-light text-white mb-2">
+                        {CATEGORIES.find(c => c.id === selectedCategory)?.label}
+                      </h2>
+                      <p className="text-stone-400 font-light">
+                        {allCategoryImages.length} {allCategoryImages.length === 1 ? 'imagen' : 'imágenes'}
+                      </p>
+                    </div>
                   </div>
                 )}
               </div>
@@ -213,7 +171,7 @@ export default function Projects() {
         </div>
       </section>
 
-      {lightboxOpen && lightboxProject && (
+      {lightboxOpen && allCategoryImages.length > 0 && (
         <div
           className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-6 animate-fade-in"
           onClick={closeLightbox}
@@ -230,14 +188,14 @@ export default function Projects() {
           >
             <div className="relative aspect-video overflow-hidden bg-stone-900">
               <img
-                src={lightboxProject.images[lightboxImageIndex]}
-                alt={`${lightboxProject.title} - ${lightboxImageIndex + 1}`}
+                src={allCategoryImages[lightboxImageIndex]}
+                alt={`${selectedCategory} - ${lightboxImageIndex + 1}`}
                 className="w-full h-full object-contain"
               />
             </div>
-            {lightboxProject.images.length > 1 && (
+            {allCategoryImages.length > 1 && (
               <div className="flex justify-center mt-6 space-x-2">
-                {lightboxProject.images.map((_, idx) => (
+                {allCategoryImages.map((_, idx) => (
                   <button
                     key={idx}
                     onClick={() => setLightboxImageIndex(idx)}
