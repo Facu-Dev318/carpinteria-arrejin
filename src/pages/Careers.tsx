@@ -48,6 +48,26 @@ export default function Careers() {
 
       if (error) throw error;
 
+      const apiUrl = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-cv-email`;
+      const emailResponse = await fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+          cvUrl: cvUrl,
+        }),
+      });
+
+      if (!emailResponse.ok) {
+        console.error('Error al enviar email:', await emailResponse.text());
+      }
+
       setSubmitStatus('success');
       setFormData({ name: '', email: '', phone: '', message: '' });
       setCvFile(null);

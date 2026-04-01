@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
           <div className="space-y-6 lg:col-span-1">
-            <Logo variant="light" className="h-12 w-auto" />
+            <Logo variant="light" className="h-20 w-auto" />
             <p className="text-xs font-light text-stone-400 leading-relaxed uppercase tracking-wider">
               Carpintería arquitectónica premium
             </p>
@@ -67,18 +67,18 @@ export default function Footer() {
             </h4>
             <div className="flex flex-col space-y-3">
               <a
-                href="mailto:info@carpinteriaarrejin.com.ar"
+                href="mailto:carpinteria.arrejin@gmail.com"
                 className="flex items-start space-x-3 text-sm font-light text-stone-300 hover:text-white transition-colors duration-300"
               >
                 <Mail size={18} className="mt-0.5 flex-shrink-0" />
-                <span>info@carpinteriaarrejin.com.ar</span>
+                <span>carpinteria.arrejin@gmail.com</span>
               </a>
               <a
-                href="tel:+541142567890"
+                href="tel:+541135807288"
                 className="flex items-start space-x-3 text-sm font-light text-stone-300 hover:text-white transition-colors duration-300"
               >
                 <Phone size={18} className="mt-0.5 flex-shrink-0" />
-                <span>+54 11 4256-7890</span>
+                <span>+54 11 3580-7288</span>
               </a>
               <div className="flex items-start space-x-3 text-sm font-light text-stone-300">
                 <MapPin size={18} className="mt-0.5 flex-shrink-0" />

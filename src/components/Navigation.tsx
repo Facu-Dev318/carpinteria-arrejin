@@ -47,7 +47,7 @@ export default function Navigation() {
               to="/"
               className="relative z-50 flex items-center transition-opacity duration-300 hover:opacity-80 py-4"
             >
-              <Logo className="h-16 lg:h-20 w-auto object-contain" />
+              <Logo className="h-20 lg:h-24 w-auto object-contain" />
             </Link>
 
             <button

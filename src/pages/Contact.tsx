@@ -27,7 +27,7 @@ export default function Contact() {
                 </h2>
                 <div className="space-y-6">
                   <a
-                    href="https://wa.me/5491142567890"
+                    href="https://wa.me/5491135807288"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-start space-x-4 p-6 bg-stone-50 hover:bg-stone-100 transition-colors duration-300 group"
@@ -36,23 +36,23 @@ export default function Contact() {
                     <div>
                       <h3 className="text-lg font-normal text-stone-900 mb-2">WhatsApp</h3>
                       <p className="text-stone-600 font-light">
-                        +54 9 11 4256-7890
+                        +54 11 3580-7288
                       </p>
                       <p className="text-sm text-stone-500 font-light mt-1">
-                        Respuesta inmediata en horario comercial
+                        Renzo Arrejin - Respuesta inmediata en horario comercial
                       </p>
                     </div>
                   </a>
 
                   <a
-                    href="mailto:info@carpinteriaarrejin.com.ar"
+                    href="mailto:carpinteria.arrejin@gmail.com"
                     className="flex items-start space-x-4 p-6 bg-stone-50 hover:bg-stone-100 transition-colors duration-300 group"
                   >
                     <Mail size={24} className="text-stone-800 flex-shrink-0 mt-1 group-hover:scale-110 transition-transform duration-300" />
                     <div>
                       <h3 className="text-lg font-normal text-stone-900 mb-2">Email</h3>
                       <p className="text-stone-600 font-light">
-                        info@carpinteriaarrejin.com.ar
+                        carpinteria.arrejin@gmail.com
                       </p>
                       <p className="text-sm text-stone-500 font-light mt-1">
                         Para consultas generales y presupuestos
@@ -61,14 +61,17 @@ export default function Contact() {
                   </a>
 
                   <a
-                    href="tel:+541142567890"
+                    href="tel:+541135807288"
                     className="flex items-start space-x-4 p-6 bg-stone-50 hover:bg-stone-100 transition-colors duration-300 group"
                   >
                     <Phone size={24} className="text-stone-800 flex-shrink-0 mt-1 group-hover:scale-110 transition-transform duration-300" />
                     <div>
                       <h3 className="text-lg font-normal text-stone-900 mb-2">Teléfono</h3>
                       <p className="text-stone-600 font-light">
-                        +54 11 4256-7890
+                        +54 11 3580-7288
+                      </p>
+                      <p className="text-sm text-stone-500 font-light mt-1">
+                        Renzo Arrejin
                       </p>
                       <p className="text-sm text-stone-500 font-light mt-1">
                         Lun a Vie: 8:00 a 18:00 hs
@@ -94,18 +97,6 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="bg-stone-900 text-white p-8 space-y-4">
-                <h3 className="text-2xl font-light">Contacto directo con dirección</h3>
-                <p className="font-light text-stone-300 leading-relaxed">
-                  Para proyectos de envergadura o consultas específicas, podés contactar directamente a Renzo Arrejin, Director General.
-                </p>
-                <a
-                  href="mailto:renzo@carpinteriaarrejin.com.ar"
-                  className="inline-block text-white hover:text-stone-300 transition-colors duration-300 border-b border-white hover:border-stone-300 font-light"
-                >
-                  renzo@carpinteriaarrejin.com.ar
-                </a>
-              </div>
             </div>
 
             <div className="space-y-8">
@@ -145,16 +136,6 @@ export default function Contact() {
         </div>
       </section>
 
-      <section className="py-16 lg:py-24 bg-stone-50">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-light text-stone-900 mb-6">
-            Alcance nacional
-          </h2>
-          <p className="text-lg text-stone-600 font-light leading-relaxed">
-            Si bien nuestro taller está en Buenos Aires, trabajamos en proyectos en todo el territorio argentino. Contamos con logística propia y equipo de montaje para garantizar la correcta instalación en cualquier punto del país.
-          </p>
-        </div>
-      </section>
     </div>
   );
 }

@@ -225,10 +225,6 @@ export default function Home() {
                     <span className="text-stone-500 mt-1">—</span>
                     <span>Montaje y supervisión en obra</span>
                   </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-stone-500 mt-1">—</span>
-                    <span>Alcance nacional con logística propia</span>
-                  </li>
                 </ul>
               </div>
             </div>
