@@ -54,7 +54,7 @@ Este correo fue generado automáticamente desde el formulario de trabajo del sit
         "Authorization": `Bearer ${resendApiKey}`,
       },
       body: JSON.stringify({
-        from: "Carpintería Arrejin <noreply@carpinteriaarrejin.com>",
+        from: "Carpintería Arrejin <onboarding@resend.dev>",
         to: ["carpinteria.arrejin@gmail.com"],
         subject: `Nueva solicitud laboral - ${name}`,
         text: emailBody,
