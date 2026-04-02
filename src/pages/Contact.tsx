@@ -43,7 +43,9 @@ export default function Contact() {
                   </a>
 
                   <a
-                    href="tel:+541135807288"
+                    href="https://wa.me/5491135807288"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-start space-x-4 p-6 bg-stone-50 hover:bg-stone-100 transition-colors duration-300 group"
                   >
                     <Phone size={24} className="text-stone-800 flex-shrink-0 mt-1 group-hover:scale-110 transition-transform duration-300" />

@@ -3,7 +3,7 @@ export default function Logo({ className = '' }) {
     <img
       src="/logo-arrejin.png"
       alt="Carpintería Arrejin"
-      className={`h-14 w-auto object-contain ${className}`}
+      className={`h-16 w-auto object-contain ${className}`}
     />
   );
 }

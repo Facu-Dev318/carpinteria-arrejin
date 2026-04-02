@@ -74,7 +74,9 @@ export default function Footer() {
                 <span>carpinteria.arrejin@gmail.com</span>
               </a>
               <a
-                href="tel:+541135807288"
+                href="https://wa.me/5491135807288"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-start space-x-3 text-sm font-light text-stone-300 hover:text-white transition-colors duration-300"
               >
                 <Phone size={18} className="mt-0.5 flex-shrink-0" />
