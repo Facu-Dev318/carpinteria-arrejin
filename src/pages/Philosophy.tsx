@@ -58,7 +58,7 @@ export default function Philosophy() {
                 Tradición que evoluciona
               </h2>
               <p className="text-lg font-light text-stone-700 leading-relaxed">
-                Hoy somos un equipo de 15 profesionales, entre ellos operarios, colocadores, arquitecta, diseñadora y electricista, que continúan trabajando cada proyecto con la misma dedicación que nos caracteriza desde el inicio.
+                Somos una empresa familiar que lleva décadas apostando al crecimiento sostenido: cada año reinvertimos en maquinaria de última generación y en la capacitación de nuestro equipo. Esa filosofía de mejora continua es la que nos posicionó como una de las carpinterías de mayor calidad y prestigio en toda la provincia de Buenos Aires.
               </p>
             </div>
           </div>

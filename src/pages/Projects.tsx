@@ -4,7 +4,8 @@ import { supabase, Project } from '../lib/supabase';
 
 const CATEGORIES = [
   { id: 'cocinas', label: 'Cocinas' },
-  { id: 'revestimientos', label: 'Revestimientos y Vanitorys' },
+  { id: 'revestimientos', label: 'Revestimientos' },
+  { id: 'vanitorys', label: 'Vanitorys' },
   { id: 'bibliotecas', label: 'Bibliotecas y Repisas' },
   { id: 'puertas', label: 'Puertas' },
   { id: 'escaleras', label: 'Escaleras' },
@@ -37,7 +38,15 @@ export default function Projects() {
   };
 
   useEffect(() => {
-    const categoryProjects = projects.filter(p => p.category === selectedCategory || (selectedCategory === 'bibliotecas' && p.category === 'bibliotecas y repisas'));
+    const categoryProjects = projects.filter(p => {
+      if (selectedCategory === 'bibliotecas' && p.category === 'bibliotecas y repisas') {
+        return true;
+      }
+      if (selectedCategory === 'vanitorys' && p.category === 'vanitory') {
+        return true;
+      }
+      return p.category === selectedCategory;
+    });
     const images: string[] = [];
     categoryProjects.forEach(project => {
       images.push(...project.images);
