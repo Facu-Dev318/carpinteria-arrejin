@@ -1,7 +1,14 @@
 import { Users, Ruler, Factory, CheckCircle } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
-const capacidadImages: string[] = [];
+const capacidadImages: string[] = [
+  'https://whpryuuxmngoxfhdxgek.supabase.co/storage/v1/object/public/projects/capacidad/WA0106.jpg',
+  'https://whpryuuxmngoxfhdxgek.supabase.co/storage/v1/object/public/projects/capacidad/WA0107.jpg',
+  'https://whpryuuxmngoxfhdxgek.supabase.co/storage/v1/object/public/projects/capacidad/WA0109.jpg',
+  'https://whpryuuxmngoxfhdxgek.supabase.co/storage/v1/object/public/projects/capacidad/WA0000.jpg',
+  'https://whpryuuxmngoxfhdxgek.supabase.co/storage/v1/object/public/projects/capacidad/WA0001.jpg',
+  'https://whpryuuxmngoxfhdxgek.supabase.co/storage/v1/object/public/projects/capacidad/WA0002.jpg'
+];
 
 export default function Capacity() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
