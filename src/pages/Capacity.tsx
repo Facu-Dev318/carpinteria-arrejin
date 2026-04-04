@@ -23,7 +23,7 @@ export default function Capacity() {
     <div className="min-h-screen pt-20 lg:pt-24">
       <section className="py-16 lg:py-24 bg-stone-900 text-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-light animate-fade-in-up text-center">
+          <h1 className="text-2xl md:text-4xl lg:text-6xl font-light animate-fade-in-up text-center">
             Capacidad productiva para obras simultáneas
           </h1>
         </div>
@@ -31,8 +31,8 @@ export default function Capacity() {
 
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
-            <div className="relative aspect-[4/5] overflow-hidden bg-stone-900 flex items-center justify-center">
+          <div className="flex flex-col lg:grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-16 lg:mb-24">
+            <div className="relative aspect-square lg:aspect-[4/5] w-full overflow-hidden bg-stone-900 flex items-center justify-center">
               {capacidadImages.length === 0 ? (
                 <div className="text-center px-8">
                   <p className="text-stone-400 font-light text-lg">Fotos del taller</p>
@@ -52,10 +52,10 @@ export default function Capacity() {
               )}
             </div>
             <div className="space-y-6">
-              <h2 className="text-4xl lg:text-5xl font-light text-stone-900">
+              <h2 className="text-2xl md:text-4xl lg:text-5xl font-light text-stone-900">
                 Infraestructura moderna
               </h2>
-              <p className="text-lg font-light text-stone-700 leading-relaxed">
+              <p className="text-base md:text-lg font-light text-stone-700 leading-relaxed">
                 Contamos con un taller equipado con maquinaria de precisión y procesos optimizados que nos permiten abordar proyectos de alta complejidad con eficiencia y calidad constante. Nuestra infraestructura integra tecnología, experiencia técnica y control en cada etapa productiva, garantizando resultados precisos y cumplimiento riguroso de los plazos.
               </p>
             </div>

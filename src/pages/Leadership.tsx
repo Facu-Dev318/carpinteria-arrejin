@@ -56,18 +56,20 @@ export default function Leadership() {
                 </h3>
                 <div className="space-y-3">
                   <a
-                    href="mailto:renzo@carpinteriaarrejin.com.ar"
+                    href="mailto:carpinteria.arrejin@gmail.com"
                     className="flex items-center space-x-3 text-stone-700 hover:text-stone-900 transition-colors duration-300"
                   >
                     <Mail size={20} />
-                    <span className="font-light">renzo@carpinteriaarrejin.com.ar</span>
+                    <span className="font-light">carpinteria.arrejin@gmail.com</span>
                   </a>
                   <a
-                    href="tel:+5491156789012"
+                    href="https://wa.me/5491135807288"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center space-x-3 text-stone-700 hover:text-stone-900 transition-colors duration-300"
                   >
                     <Phone size={20} />
-                    <span className="font-light">+54 9 11 5678-9012</span>
+                    <span className="font-light">+54 11 3580-7288</span>
                   </a>
                   <a
                     href="https://linkedin.com"

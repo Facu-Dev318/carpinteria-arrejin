@@ -5,11 +5,11 @@ export default function Contact() {
     <div className="min-h-screen pt-20 lg:pt-24">
       <section className="py-16 lg:py-24 bg-stone-900 text-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <h1 className="text-5xl lg:text-7xl font-light mb-8 animate-fade-in-up">
+          <h1 className="text-3xl md:text-5xl lg:text-7xl font-light mb-6 lg:mb-8 animate-fade-in-up">
             Contacto
           </h1>
           <p
-            className="text-lg lg:text-xl font-light text-stone-300 max-w-3xl leading-relaxed"
+            className="text-base md:text-lg lg:text-xl font-light text-stone-300 max-w-3xl leading-relaxed"
             style={{ animationDelay: '0.2s' }}
           >
             Estamos disponibles para conversar sobre tu proyecto arquitectónico. Trabajamos con estudios, desarrolladores y clientes premium en toda Argentina.
@@ -28,7 +28,7 @@ export default function Contact() {
                 <div className="space-y-6">
                   <a
                     href="mailto:carpinteria.arrejin@gmail.com"
-                    className="flex items-start space-x-4 p-6 bg-stone-50 hover:bg-stone-100 transition-colors duration-300 group"
+                    className="flex items-start space-x-4 p-6 bg-stone-50 hover:bg-stone-100 transition-colors duration-300 group min-h-[44px]"
                   >
                     <Mail size={24} className="text-stone-800 flex-shrink-0 mt-1 group-hover:scale-110 transition-transform duration-300" />
                     <div>
@@ -46,7 +46,7 @@ export default function Contact() {
                     href="https://wa.me/5491135807288"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-start space-x-4 p-6 bg-stone-50 hover:bg-stone-100 transition-colors duration-300 group"
+                    className="flex items-start space-x-4 p-6 bg-stone-50 hover:bg-stone-100 transition-colors duration-300 group min-h-[44px]"
                   >
                     <Phone size={24} className="text-stone-800 flex-shrink-0 mt-1 group-hover:scale-110 transition-transform duration-300" />
                     <div>
@@ -84,7 +84,7 @@ export default function Contact() {
             </div>
 
             <div className="space-y-8">
-              <div className="aspect-square bg-stone-200 overflow-hidden">
+              <div className="aspect-video lg:aspect-square bg-stone-200 overflow-hidden">
                 <iframe
                   src="https://www.google.com/maps?q=Dumont+636,+Isidro+Casanova,+Buenos+Aires,+Argentina&output=embed"
                   width="100%"

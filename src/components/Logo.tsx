@@ -1,9 +1,12 @@
 export default function Logo({ className = '' }) {
   return (
-    <img
-      src="/logo-arrejin.png"
-      alt="Carpintería Arrejin"
-      className={`h-16 w-auto object-contain ${className}`}
-    />
+    <div className={`${className}`}>
+      <img
+        src="/logo-arrejin.png"
+        alt="Carpintería Arrejin"
+        className="w-full h-full object-contain"
+        style={{ padding: '8%' }}
+      />
+    </div>
   );
 }

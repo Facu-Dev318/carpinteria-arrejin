@@ -83,11 +83,11 @@ export default function Projects() {
     <div className="min-h-screen pt-20 lg:pt-24">
       <section className="py-16 lg:py-24 bg-stone-900 text-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <h1 className="text-5xl lg:text-7xl font-light mb-8 animate-fade-in-up">
+          <h1 className="text-3xl md:text-5xl lg:text-7xl font-light mb-6 lg:mb-8 animate-fade-in-up">
             Proyectos
           </h1>
           <p
-            className="text-lg lg:text-xl font-light text-stone-300 max-w-3xl leading-relaxed"
+            className="text-base md:text-lg lg:text-xl font-light text-stone-300 max-w-3xl leading-relaxed"
             style={{ animationDelay: '0.2s' }}
           >
             Desarrollamos proyectos de carpintería entendiendo en profundidad la dinámica de una obra. Sabemos que cada decisión impacta en tiempos, costos y resultados, por eso trabajamos con precisión, planificación y materiales de alta calidad para garantizar ejecuciones confiables y duraderas.
@@ -102,19 +102,19 @@ export default function Projects() {
               <p className="text-stone-400 font-light text-lg">Cargando proyectos...</p>
             </div>
           ) : (
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            <div className="flex flex-col lg:grid lg:grid-cols-12 gap-6 lg:gap-8">
               <div className="lg:col-span-3 space-y-2">
                 {CATEGORIES.map((category) => (
                   <button
                     key={category.id}
                     onClick={() => setSelectedCategory(category.id)}
-                    className={`w-full flex items-center justify-between px-6 py-4 text-left transition-all duration-300 group ${
+                    className={`w-full flex items-center justify-between px-4 py-3 lg:px-6 lg:py-4 text-left transition-all duration-300 group min-h-[44px] ${
                       selectedCategory === category.id
                         ? 'bg-amber-800 text-white'
                         : 'bg-stone-900 text-stone-300 hover:bg-stone-800'
                     }`}
                   >
-                    <span className="text-sm font-light tracking-wide uppercase">
+                    <span className="text-xs lg:text-sm font-light tracking-wide uppercase">
                       {category.label}
                     </span>
                     <ChevronRight

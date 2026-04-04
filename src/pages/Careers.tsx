@@ -83,11 +83,11 @@ export default function Careers() {
     <div className="min-h-screen pt-20 lg:pt-24">
       <section className="py-16 lg:py-24 bg-stone-900 text-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <h1 className="text-5xl lg:text-7xl font-light mb-8 animate-fade-in-up">
+          <h1 className="text-3xl md:text-5xl lg:text-7xl font-light mb-6 lg:mb-8 animate-fade-in-up">
             Trabajá con nosotros
           </h1>
           <p
-            className="text-lg lg:text-xl font-light text-stone-300 max-w-3xl leading-relaxed"
+            className="text-base md:text-lg lg:text-xl font-light text-stone-300 max-w-3xl leading-relaxed"
             style={{ animationDelay: '0.2s' }}
           >
             Estamos en constante crecimiento y siempre buscamos sumar talento comprometido con la excelencia y el trabajo bien hecho.

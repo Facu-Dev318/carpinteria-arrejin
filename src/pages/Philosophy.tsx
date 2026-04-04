@@ -21,11 +21,11 @@ export default function Philosophy() {
     <div className="min-h-screen pt-20 lg:pt-24">
       <section className="py-16 lg:py-24 bg-stone-900 text-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <h1 className="text-5xl lg:text-7xl font-light mb-8 animate-fade-in-up">
+          <h1 className="text-3xl md:text-5xl lg:text-7xl font-light mb-6 lg:mb-8 animate-fade-in-up">
             Filosofía
           </h1>
           <p
-            className="text-lg lg:text-xl font-light text-stone-300 max-w-3xl leading-relaxed"
+            className="text-base md:text-lg lg:text-xl font-light text-stone-300 max-w-3xl leading-relaxed"
             style={{ animationDelay: '0.2s' }}
           >
             Hoy somos un equipo de 15 profesionales, entre ellos operarios, colocadores, arquitecta, diseñadora y electricista, que continúan trabajando cada proyecto con la misma dedicación que nos caracteriza desde el inicio.
@@ -35,8 +35,8 @@ export default function Philosophy() {
 
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-full bg-stone-900 flex items-center justify-center">
+          <div className="flex flex-col lg:grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-16 lg:mb-24">
+            <div className="relative aspect-square lg:aspect-[4/5] w-full max-w-md lg:max-w-none overflow-hidden rounded-full bg-stone-900 flex items-center justify-center">
               {filosofiaImages.length === 0 ? (
                 <div className="text-center px-8">
                   <p className="text-stone-400 font-light text-lg">Imágenes del taller</p>
@@ -56,10 +56,10 @@ export default function Philosophy() {
               )}
             </div>
             <div className="space-y-6">
-              <h2 className="text-4xl lg:text-5xl font-light text-stone-900">
+              <h2 className="text-2xl md:text-4xl lg:text-5xl font-light text-stone-900">
                 Tradición que evoluciona
               </h2>
-              <p className="text-lg font-light text-stone-700 leading-relaxed">
+              <p className="text-base md:text-lg font-light text-stone-700 leading-relaxed">
                 Somos una empresa familiar que lleva décadas apostando al crecimiento sostenido: cada año reinvertimos en maquinaria de última generación y en la capacitación de nuestro equipo. Esa filosofía de mejora continua es la que nos posicionó como una de las carpinterías de mayor calidad y prestigio en toda la provincia de Buenos Aires.
               </p>
             </div>
@@ -107,16 +107,16 @@ export default function Philosophy() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="flex flex-col lg:grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="space-y-6 order-2 lg:order-1">
-              <h2 className="text-4xl lg:text-5xl font-light text-stone-900">
+              <h2 className="text-2xl md:text-4xl lg:text-5xl font-light text-stone-900">
                 Visión contemporánea
               </h2>
-              <p className="text-lg font-light text-stone-700 leading-relaxed">
+              <p className="text-base md:text-lg font-light text-stone-700 leading-relaxed">
                 Nuestra meta es consolidarnos como un referente en carpintería de diseño, y construir relaciones a largo plazo, convirtiéndonos en el aliado confiable para arquitectos, desarrolladores y clientes que buscan resultados de calidad.
               </p>
             </div>
-            <div className="relative aspect-[4/5] overflow-hidden order-1 lg:order-2">
+            <div className="relative aspect-square lg:aspect-[4/5] w-full overflow-hidden order-1 lg:order-2">
               <img
                 src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1200"
                 alt="Visión moderna"

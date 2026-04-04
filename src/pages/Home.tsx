@@ -39,17 +39,17 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-white mb-6 animate-fade-in-up leading-tight uppercase">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-white mb-6 animate-fade-in-up leading-tight uppercase">
             Carpintería Arrejin
           </h1>
           <p
-            className="text-xl md:text-2xl lg:text-3xl font-light text-white/95 mb-8 max-w-3xl mx-auto leading-snug animate-fade-in-up"
+            className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light text-white/95 mb-8 max-w-3xl mx-auto leading-snug animate-fade-in-up"
             style={{ animationDelay: '0.15s' }}
           >
             Diseño en madera para obras que exigen detalle
           </p>
           <p
-            className="text-base md:text-lg font-light text-white/80 mb-12 max-w-2xl mx-auto leading-relaxed animate-fade-in-up"
+            className="text-sm sm:text-base md:text-lg font-light text-white/80 mb-12 max-w-2xl mx-auto leading-relaxed animate-fade-in-up"
             style={{ animationDelay: '0.3s' }}
           >
             Con más de 60 años de trayectoria, trabajamos junto a estudios y desarrolladores dando forma a proyectos donde el diseño y la precisión son protagonistas.
