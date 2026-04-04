@@ -4,8 +4,7 @@ import { useEffect, useState } from 'react';
 const capacidadImages: string[] = [
   '/IMG-20260402-WA0106.jpg',
   '/IMG-20260402-WA0107.jpg',
-  '/IMG-20260402-WA0109.jpg',
-  '/IMG-20260403-WA0000.jpg'
+  '/IMG-20260402-WA0109.jpg'
 ];
 
 export default function Capacity() {
