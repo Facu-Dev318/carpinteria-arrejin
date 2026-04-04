@@ -9,6 +9,7 @@ const CATEGORIES = [
   { id: 'bibliotecas', label: 'Bibliotecas y Repisas' },
   { id: 'puertas', label: 'Puertas' },
   { id: 'escaleras', label: 'Escaleras' },
+  { id: 'cavas', label: 'Cavas' },
 ];
 
 export default function Projects() {
