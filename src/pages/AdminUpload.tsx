@@ -183,6 +183,8 @@ export default function AdminUpload() {
               <option value="vanitory">Vanitory</option>
               <option value="bibliotecas">Bibliotecas y repisas</option>
               <option value="vestidor">Vestidor</option>
+              <option value="filosofia">Filosofía</option>
+              <option value="capacidad">Capacidad Productiva</option>
             </select>
           </div>
 
@@ -330,6 +332,8 @@ export default function AdminUpload() {
                               <option value="bibliotecas y repisas">Bibliotecas y Repisas</option>
                               <option value="puertas">Puertas</option>
                               <option value="escaleras">Escaleras</option>
+                              <option value="filosofia">Filosofía</option>
+                              <option value="capacidad">Capacidad Productiva</option>
                             </select>
                             <button
                               onClick={() => updateProjectCategory(project.id, newCategory)}

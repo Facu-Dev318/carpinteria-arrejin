@@ -2,12 +2,12 @@ import { Users, Ruler, Factory, CheckCircle } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 const capacidadImages: string[] = [
-  'https://whpryuuxmngoxfhdxgek.supabase.co/storage/v1/object/public/projects/capacidad/WA0106.jpg',
-  'https://whpryuuxmngoxfhdxgek.supabase.co/storage/v1/object/public/projects/capacidad/WA0107.jpg',
-  'https://whpryuuxmngoxfhdxgek.supabase.co/storage/v1/object/public/projects/capacidad/WA0109.jpg',
-  'https://whpryuuxmngoxfhdxgek.supabase.co/storage/v1/object/public/projects/capacidad/WA0000.jpg',
-  'https://whpryuuxmngoxfhdxgek.supabase.co/storage/v1/object/public/projects/capacidad/WA0001.jpg',
-  'https://whpryuuxmngoxfhdxgek.supabase.co/storage/v1/object/public/projects/capacidad/WA0002.jpg'
+  '/IMG-20260402-WA0106.jpg',
+  '/IMG-20260402-WA0107.jpg',
+  '/IMG-20260402-WA0109.jpg',
+  '/IMG-20260403-WA0000.jpg',
+  '/IMG-20260403-WA0001.jpg',
+  '/IMG-20260403-WA0002.jpg'
 ];
 
 export default function Capacity() {

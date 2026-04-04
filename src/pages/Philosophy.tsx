@@ -2,7 +2,7 @@ import { Award, Heart, Target, TrendingUp } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 const filosofiaImages: string[] = [
-  'https://whpryuuxmngoxfhdxgek.supabase.co/storage/v1/object/public/projects/filosofia/WA0108.jpg'
+  '/IMG-20260402-WA0108.jpg'
 ];
 
 export default function Philosophy() {
