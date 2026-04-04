@@ -5,9 +5,7 @@ const capacidadImages: string[] = [
   '/IMG-20260402-WA0106.jpg',
   '/IMG-20260402-WA0107.jpg',
   '/IMG-20260402-WA0109.jpg',
-  '/IMG-20260403-WA0000.jpg',
-  '/IMG-20260403-WA0001.jpg',
-  '/IMG-20260403-WA0002.jpg'
+  '/IMG-20260403-WA0000.jpg'
 ];
 
 export default function Capacity() {
