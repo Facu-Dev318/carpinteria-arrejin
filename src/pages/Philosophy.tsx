@@ -123,7 +123,7 @@ export default function Philosophy() {
             </div>
             <div className="relative aspect-square lg:aspect-[4/5] w-full overflow-hidden order-1 lg:order-2">
               <img
-                src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                src="/Captura_de_pantalla_2026-04-04_233152.png"
                 alt="Visión moderna"
                 className="w-full h-full object-cover"
               />
