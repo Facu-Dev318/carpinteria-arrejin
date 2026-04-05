@@ -24,12 +24,17 @@ export default function Philosophy() {
           <h1 className="text-3xl md:text-5xl lg:text-7xl font-light mb-6 lg:mb-8 animate-fade-in-up">
             Filosofía
           </h1>
-          <p
-            className="text-base md:text-lg lg:text-xl font-light text-stone-300 max-w-3xl leading-relaxed"
+          <div
+            className="text-base md:text-lg lg:text-xl font-light text-stone-300 max-w-3xl leading-relaxed text-justify"
             style={{ animationDelay: '0.2s' }}
           >
-            Desde nuestros comienzos, hace más de 60 años, nos formamos en el oficio de manera artesanal, trabajando la madera con dedicación, precisión y respeto por cada detalle. Ese compromiso por la calidad se convirtió en el pilar fundamental sobre el cual construimos nuestra identidad, hoy somos un equipo de 15 profesionales, integrado por operarios, colocadores, una arquitecta y un electricista, que trabajan de manera coordinada para dar vida a cada proyecto. Mantenemos intacta la dedicación y el compromiso que nos define desde nuestros comienzos, combinando experiencia, conocimiento técnico y pasión por lo que hacemos.
-          </p>
+            <p className="mb-4">
+              Desde nuestros comienzos, hace más de 60 años, nos formamos en el oficio de manera artesanal, trabajando la madera con dedicación, precisión y respeto por cada detalle. Ese compromiso por la calidad se convirtió en el pilar fundamental sobre el cual construimos nuestra identidad.
+            </p>
+            <p>
+              Hoy somos un equipo de 15 profesionales, integrado por operarios, colocadores, una arquitecta y un electricista, que trabajan de manera coordinada para dar vida a cada proyecto. Mantenemos intacta la dedicación y el compromiso que nos define desde nuestros comienzos, combinando experiencia, conocimiento técnico y pasión por lo que hacemos.
+            </p>
+          </div>
         </div>
       </section>
 
