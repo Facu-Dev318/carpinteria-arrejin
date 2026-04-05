@@ -245,7 +245,7 @@ export default function Home() {
                 </h2>
               </div>
               <p className="text-base lg:text-lg text-stone-600 font-light leading-relaxed">
-                Si representás un estudio de arquitectura, desarrolladora inmobiliaria o proyecto de hospitalidad y estás buscando un socio confiable para carpintería de alto nivel, conversemos.
+                Si buscas un socio confiable para tu próximo proyecto, conversemos.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
                 <Link
