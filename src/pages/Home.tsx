@@ -183,7 +183,7 @@ export default function Home() {
                   Carpintería Arrejin combina el conocimiento artesanal transmitido a través de tres generaciones con infraestructura moderna y capacidad productiva para proyectos de envergadura.
                 </p>
                 <p>
-                  Trabajamos junto a estudios de arquitectura, desarrolladores inmobiliarios y marcas de hospitalidad para materializar obras que exigen precisión técnica, acabados impecables y cumplimiento de plazos estrictos.
+                  Trabajamos junto a nuestros clientes para materializar obras que exigen precisión técnica, acabados impecables y cumplimiento de plazos estrictos.
                 </p>
                 <p>
                   Nuestro taller cuenta con maquinaria CNC, equipos de calibrado profesional y líneas de acabado que garantizan consistencia y calidad en cada pieza que entregamos.
