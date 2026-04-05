@@ -23,9 +23,12 @@ export default function Capacity() {
     <div className="min-h-screen pt-20 lg:pt-24">
       <section className="py-16 lg:py-24 bg-stone-900 text-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <h1 className="text-2xl md:text-4xl lg:text-6xl font-light animate-fade-in-up text-center">
-            Capacidad productiva para obras simultáneas
+          <h1 className="text-2xl md:text-4xl lg:text-6xl font-light animate-fade-in-up text-center mb-8">
+            Capacidad Productiva
           </h1>
+          <p className="text-base md:text-lg lg:text-xl font-light text-stone-300 max-w-4xl mx-auto leading-relaxed text-justify">
+            Nuestra estructura productiva nos permite gestionar varios proyectos de manera paralela sin comprometer plazos ni calidad. Trabajamos regularmente con estudios de arquitectura y desarrolladores en obras de mediana y gran escala
+          </p>
         </div>
       </section>
 
