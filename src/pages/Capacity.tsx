@@ -66,9 +66,9 @@ export default function Capacity() {
               <div className="inline-flex items-center justify-center w-14 h-14 bg-stone-100 text-stone-800 rounded-full">
                 <Factory size={24} />
               </div>
-              <h3 className="text-2xl font-light text-stone-900">1.200m² de taller</h3>
+              <h3 className="text-2xl font-light text-stone-900">Proyectos mensuales</h3>
               <p className="text-stone-600 font-light leading-relaxed">
-                Espacio equipado con áreas diferenciadas para cada etapa del proceso productivo: corte, fabricación, terminación y control de calidad.
+                Capacidad productiva para múltiples obras simultáneas en toda la provincia de Buenos Aires.
               </p>
             </div>
 
