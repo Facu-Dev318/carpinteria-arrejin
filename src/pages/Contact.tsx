@@ -12,7 +12,7 @@ export default function Contact() {
             className="text-base md:text-lg lg:text-xl font-light text-stone-300 max-w-3xl leading-relaxed"
             style={{ animationDelay: '0.2s' }}
           >
-            Hagamos realidad proximo tu proyecto
+            Hagamos realidad tu próximo proyecto
           </p>
         </div>
       </section>
