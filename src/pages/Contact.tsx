@@ -12,7 +12,7 @@ export default function Contact() {
             className="text-base md:text-lg lg:text-xl font-light text-stone-300 max-w-3xl leading-relaxed"
             style={{ animationDelay: '0.2s' }}
           >
-            Estamos disponibles para conversar sobre tu proyecto arquitectónico. Trabajamos con estudios, desarrolladores y clientes premium en toda Argentina.
+            Hagamos realidad proximo tu proyecto
           </p>
         </div>
       </section>
