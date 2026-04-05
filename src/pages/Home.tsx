@@ -117,7 +117,7 @@ export default function Home() {
                 Proyectos destacados
               </h2>
               <p className="text-lg text-stone-600 font-light max-w-2xl leading-relaxed">
-                Una selección de trabajos que reflejan nuestra capacidad técnica, sensibilidad arquitectónica y compromiso con la excelencia
+                Una selección de trabajos que reflejan nuestra capacidad técnica y compromiso con la excelencia
               </p>
             </div>
 
