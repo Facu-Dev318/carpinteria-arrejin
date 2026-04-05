@@ -115,10 +115,10 @@ export default function Philosophy() {
           <div className="flex flex-col lg:grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="space-y-6 order-2 lg:order-1">
               <h2 className="text-2xl md:text-4xl lg:text-5xl font-light text-stone-900">
-                Visión contemporánea
+                Capacidad Productiva
               </h2>
-              <p className="text-base md:text-lg font-light text-stone-700 leading-relaxed">
-                Nuestra meta es consolidarnos como un referente en carpintería de diseño, y construir relaciones a largo plazo, convirtiéndonos en el aliado confiable para arquitectos, desarrolladores y clientes que buscan resultados de calidad.
+              <p className="text-base md:text-lg font-light text-stone-700 leading-relaxed text-justify">
+                Nuestra estructura productiva nos permite gestionar varios proyectos de manera paralela sin comprometer plazos ni calidad. Trabajamos regularmente con estudios de arquitectura y desarrolladores en obras de mediana y gran escala
               </p>
             </div>
             <div className="relative aspect-square lg:aspect-[4/5] w-full overflow-hidden order-1 lg:order-2">
