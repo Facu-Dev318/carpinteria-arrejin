@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin, Instagram } from 'lucide-react';
 
 export default function Contact() {
   return (
@@ -78,6 +78,24 @@ export default function Contact() {
                       </p>
                     </div>
                   </div>
+
+                  <a
+                    href="https://www.instagram.com/carpinteriaarrejin/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-start space-x-4 p-6 bg-stone-50 hover:bg-stone-100 transition-colors duration-300 group min-h-[44px]"
+                  >
+                    <Instagram size={24} className="text-stone-800 flex-shrink-0 mt-1 group-hover:scale-110 transition-transform duration-300" />
+                    <div>
+                      <h3 className="text-lg font-normal text-stone-900 mb-2">Instagram</h3>
+                      <p className="text-stone-600 font-light">
+                        @carpinteriaarrejin
+                      </p>
+                      <p className="text-sm text-stone-500 font-light mt-1">
+                        Seguinos para ver nuestros proyectos
+                      </p>
+                    </div>
+                  </a>
                 </div>
               </div>
 
