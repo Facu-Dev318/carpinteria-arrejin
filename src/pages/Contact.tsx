@@ -101,18 +101,11 @@ export default function Contact() {
                 <h3 className="text-2xl font-light text-stone-900">
                   ¿Cómo podemos ayudarte?
                 </h3>
-                <div className="space-y-4 text-stone-600 font-light">
-                  <p>Nos especializamos en:</p>
-                  <ul className="space-y-2 ml-4">
-                    <li>• Carpintería arquitectónica para proyectos residenciales</li>
-                    <li>• Mobiliario y revestimientos para hoteles y restaurantes</li>
-                    <li>• Equipamiento corporativo a medida</li>
-                    <li>• Desarrollos de alta complejidad técnica</li>
-                    <li>• Asesoramiento técnico para estudios de arquitectura</li>
-                  </ul>
-                </div>
-                <p className="text-stone-600 font-light leading-relaxed">
-                  Envianos planos, referencias o una descripción general de tu proyecto y te responderemos con una propuesta inicial y presupuesto estimativo.
+                <p className="text-stone-600 font-light leading-relaxed text-justify">
+                  Nos especializamos en carpintería a medida.
+                </p>
+                <p className="text-stone-600 font-light leading-relaxed text-justify">
+                  Envíanos planos, referencias o una descripción general de tu proyecto y te responderemos con una propuesta inicial y presupuesto estimativo.
                 </p>
               </div>
             </div>
