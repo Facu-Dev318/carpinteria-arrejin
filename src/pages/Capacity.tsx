@@ -144,7 +144,7 @@ export default function Capacity() {
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <div className="text-center space-y-8">
             <p className="text-lg font-light text-stone-300 leading-relaxed">
-              Nuestra estructura productiva nos permite gestionar varios proyectos de manera paralela sin comprometer plazos ni calidad. Trabajamos regularmente con estudios de arquitectura y desarrolladores en obras de mediana y gran escala.
+              Capacidad productiva para obras simultaneas
             </p>
           </div>
         </div>
