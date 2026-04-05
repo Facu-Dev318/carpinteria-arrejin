@@ -102,7 +102,7 @@ export default function Home() {
               <div className="text-6xl lg:text-7xl font-light text-stone-900 tracking-tight">10+</div>
               <div className="text-sm uppercase tracking-widest text-stone-500 font-normal">Proyectos mensuales</div>
               <p className="text-stone-600 font-light text-sm leading-relaxed pt-2">
-                Capacidad productiva para múltiples obras simultáneas en todo el país
+                Capacidad productiva para múltiples obras simultáneas en toda la provincia de Buenos Aires
               </p>
             </div>
           </div>
