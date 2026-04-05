@@ -22,13 +22,13 @@ export default function Philosophy() {
       <section className="py-16 lg:py-24 bg-stone-900 text-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
           <h1 className="text-3xl md:text-5xl lg:text-7xl font-light mb-6 lg:mb-8 animate-fade-in-up">
-            Capacidad Productiva
+            Filosofía
           </h1>
           <p
             className="text-base md:text-lg lg:text-xl font-light text-stone-300 max-w-4xl mx-auto leading-relaxed text-justify"
             style={{ animationDelay: '0.2s' }}
           >
-            Nuestra estructura productiva nos permite gestionar varios proyectos de manera paralela sin comprometer plazos ni calidad. Trabajamos regularmente con estudios de arquitectura y desarrolladores en obras de mediana y gran escala
+            Desde nuestros comienzos, hace más de 60 años, nos formamos en el oficio de manera artesanal, trabajando la madera con dedicación, precisión y respeto por cada detalle. Ese compromiso por la calidad se convirtió en el pilar fundamental sobre el cual construimos nuestra identidad, hoy somos un equipo de 15 profesionales, integrado por operarios, colocadores, una arquitecta y un electricista, que trabajan de manera coordinada para dar vida a cada proyecto. Mantenemos intacta la dedicación y el compromiso que nos define desde nuestros comienzos, combinando experiencia, conocimiento técnico y pasión por lo que hacemos
           </p>
         </div>
       </section>
