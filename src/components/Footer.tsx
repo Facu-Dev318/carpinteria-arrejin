@@ -28,7 +28,6 @@ export default function Footer() {
                 { path: '/proyectos', label: 'Proyectos' },
                 { path: '/filosofia', label: 'Filosofía' },
                 { path: '/capacidad', label: 'Capacidad productiva' },
-                { path: '/direccion', label: 'Dirección' },
               ].map((link) => (
                 <Link
                   key={link.path}
