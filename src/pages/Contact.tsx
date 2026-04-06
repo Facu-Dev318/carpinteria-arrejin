@@ -55,7 +55,7 @@ export default function Contact() {
                         +54 11 2372-4612
                       </p>
                       <p className="text-sm text-stone-500 font-light mt-1">
-                        Renzo Arrejin
+                        Administración
                       </p>
                       <p className="text-sm text-stone-500 font-light mt-1">
                         Lun a Vie: 8:00 a 18:00 hs
