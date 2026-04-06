@@ -175,7 +175,7 @@ export default function Home() {
                   Desde 1964
                 </div>
                 <h2 className="text-4xl lg:text-6xl font-light leading-tight">
-                  Tradición, precisión<br />y escala corporativa
+                  Tradición, precisión<br />y compromiso
                 </h2>
               </div>
               <div className="space-y-6 text-base lg:text-lg font-light text-stone-300 leading-relaxed border-l-2 border-stone-700 pl-6">
