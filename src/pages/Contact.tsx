@@ -43,7 +43,7 @@ export default function Contact() {
                   </a>
 
                   <a
-                    href="https://wa.me/5491135807288"
+                    href="https://wa.me/5491123724612"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-start space-x-4 p-6 bg-stone-50 hover:bg-stone-100 transition-colors duration-300 group min-h-[44px]"
@@ -52,7 +52,7 @@ export default function Contact() {
                     <div>
                       <h3 className="text-lg font-normal text-stone-900 mb-2">Teléfono</h3>
                       <p className="text-stone-600 font-light">
-                        +54 11 3580-7288
+                        +54 11 2372-4612
                       </p>
                       <p className="text-sm text-stone-500 font-light mt-1">
                         Renzo Arrejin
