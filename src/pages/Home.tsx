@@ -207,19 +207,15 @@ export default function Home() {
                 <ul className="space-y-3 text-sm font-light text-stone-300">
                   <li className="flex items-start space-x-2">
                     <span className="text-stone-500 mt-1">—</span>
-                    <span>Carpintería arquitectónica de alta complejidad</span>
+                    <span>Carpintería de alta calidad</span>
                   </li>
                   <li className="flex items-start space-x-2">
                     <span className="text-stone-500 mt-1">—</span>
-                    <span>Mobiliario fijo y equipamiento a medida</span>
+                    <span>Trabajos a medida</span>
                   </li>
                   <li className="flex items-start space-x-2">
                     <span className="text-stone-500 mt-1">—</span>
                     <span>Revestimientos y panelería decorativa</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-stone-500 mt-1">—</span>
-                    <span>Fabricación CNC para diseños complejos</span>
                   </li>
                   <li className="flex items-start space-x-2">
                     <span className="text-stone-500 mt-1">—</span>
