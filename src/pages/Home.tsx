@@ -88,7 +88,7 @@ export default function Home() {
               <div className="text-6xl lg:text-7xl font-light text-stone-900 tracking-tight">60</div>
               <div className="text-sm uppercase tracking-widest text-stone-500 font-normal">Años de trayectoria</div>
               <p className="text-stone-600 font-light text-sm leading-relaxed pt-2">
-                Tres generaciones perfeccionando el arte de la carpintería arquitectónica
+                Tres generaciones perfeccionando el arte de la carpintería artesanal
               </p>
             </div>
             <div className="space-y-3">
