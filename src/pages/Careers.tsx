@@ -48,6 +48,15 @@ export default function Careers() {
 
       if (error) throw error;
 
+      console.log('Intentando enviar email a:', '/.netlify/functions/send-cv-email');
+      console.log('Datos a enviar:', {
+        nombre: formData.name,
+        email: formData.email,
+        telefono: formData.phone,
+        mensaje: formData.message,
+        cvUrl: cvUrl,
+      });
+
       const emailResponse = await fetch('/.netlify/functions/send-cv-email', {
         method: 'POST',
         headers: {
@@ -62,8 +71,14 @@ export default function Careers() {
         }),
       });
 
+      console.log('Respuesta del servidor:', emailResponse.status, emailResponse.statusText);
+
       if (!emailResponse.ok) {
-        console.error('Error al enviar email:', await emailResponse.text());
+        const errorText = await emailResponse.text();
+        console.error('Error al enviar email:', errorText);
+      } else {
+        const successData = await emailResponse.json();
+        console.log('Email enviado exitosamente:', successData);
       }
 
       setSubmitStatus('success');
