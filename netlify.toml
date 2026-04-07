@@ -10,3 +10,4 @@
 [build.environment]
   VITE_SUPABASE_URL = "https://whpryuuxmngoxfhdxgek.supabase.co"
   VITE_SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndocHJ5dXV4bW5nb3hmaGR4Z2VrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ0ODQ2MjAsImV4cCI6MjA5MDA2MDYyMH0.Ym6oRQdHMeotTw__ac9rmmdYdPRNyNDLVXAu4N9xAbc"
+  RESEND_API_KEY = "re_123456789"
