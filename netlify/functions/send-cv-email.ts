@@ -56,7 +56,7 @@ export const handler = async (event: any) => {
 
     const { nombre, email, telefono, mensaje, cvUrl } = body;
 
-    if (!nombre || !email || !telefono || !cvUrl) {
+    if (!nombre || !email || !telefono) {
       return {
         statusCode: 400,
         headers,
@@ -71,8 +71,11 @@ export const handler = async (event: any) => {
       <p><strong>Teléfono:</strong> ${telefono}</p>
       <p><strong>Mensaje:</strong></p>
       <p>${mensaje || 'Sin mensaje adicional'}</p>
-      <p><strong>CV adjunto:</strong> <a href="${cvUrl}">Descargar CV</a></p>
+      ${cvUrl ? `<p><strong>CV adjunto:</strong> <a href="${cvUrl}">Descargar CV</a></p>` : '<p><em>Sin CV adjunto</em></p>'}
     `;
+
+    console.log('Intentando enviar email a carpinteria.arrejin@gmail.com...');
+    console.log('Datos:', { nombre, email, telefono, tieneCV: !!cvUrl });
 
     const result = await resend.emails.send({
       from: 'onboarding@resend.dev',
@@ -81,10 +84,28 @@ export const handler = async (event: any) => {
       html: emailContent,
     });
 
+    console.log('✅ RESPUESTA DE RESEND (ÉXITO):', JSON.stringify(result, null, 2));
+
+    if (result.error) {
+      console.error('❌ RESEND DEVOLVIÓ ERROR:', JSON.stringify(result.error, null, 2));
+      return {
+        statusCode: 500,
+        headers,
+        body: JSON.stringify({
+          error: 'Error al enviar el email',
+          details: result.error
+        }),
+      };
+    }
+
     return {
       statusCode: 200,
       headers,
-      body: JSON.stringify({ success: true, message: 'Email enviado correctamente' }),
+      body: JSON.stringify({
+        success: true,
+        message: 'Email enviado correctamente',
+        emailId: result.data?.id
+      }),
     };
   } catch (error: any) {
     console.error('Error sending email:', error);
