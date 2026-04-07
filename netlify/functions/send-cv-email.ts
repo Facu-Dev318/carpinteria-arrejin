@@ -34,7 +34,26 @@ export const handler = async (event: any) => {
   }
 
   try {
-    const body: CVSubmission = JSON.parse(event.body || '{}');
+    if (!process.env.RESEND_API_KEY) {
+      console.error('RESEND_API_KEY is not configured');
+      return {
+        statusCode: 500,
+        headers,
+        body: JSON.stringify({ error: 'Server configuration error' }),
+      };
+    }
+
+    let body: CVSubmission;
+    try {
+      body = typeof event.body === 'string' ? JSON.parse(event.body) : event.body;
+    } catch (parseError) {
+      return {
+        statusCode: 400,
+        headers,
+        body: JSON.stringify({ error: 'Invalid JSON in request body' }),
+      };
+    }
+
     const { nombre, email, telefono, mensaje, cvUrl } = body;
 
     if (!nombre || !email || !telefono || !cvUrl) {
@@ -55,8 +74,8 @@ export const handler = async (event: any) => {
       <p><strong>CV adjunto:</strong> <a href="${cvUrl}">Descargar CV</a></p>
     `;
 
-    await resend.emails.send({
-      from: 'postulaciones@carpinteria-arrejin.com',
+    const result = await resend.emails.send({
+      from: 'onboarding@resend.dev',
       to: 'carpinteria.arrejin@gmail.com',
       subject: `Nueva postulación laboral — ${nombre}`,
       html: emailContent,
@@ -72,7 +91,10 @@ export const handler = async (event: any) => {
     return {
       statusCode: 500,
       headers,
-      body: JSON.stringify({ error: 'Error al enviar el email', details: error.message }),
+      body: JSON.stringify({
+        error: 'Error al enviar el email',
+        details: error.message || 'Unknown error'
+      }),
     };
   }
 };
