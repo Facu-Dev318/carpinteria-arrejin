@@ -78,7 +78,7 @@ export const handler = async (event: any) => {
     console.log('Datos:', { nombre, email, telefono, tieneCV: !!cvUrl });
 
     const result = await resend.emails.send({
-      from: 'onboarding@resend.dev',
+      from: 'noreply@carpinteriaarrejin.com.ar',
       to: 'carpinteria.arrejin@gmail.com',
       subject: `Nueva postulación laboral — ${nombre}`,
       html: emailContent,
