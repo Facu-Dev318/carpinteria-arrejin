@@ -48,7 +48,7 @@ export default function Careers() {
 
       if (error) throw error;
 
-      console.log('Intentando enviar email a:', '/.netlify/functions/send-cv-email');
+      console.log('Intentando enviar email a:', '/api/send-cv-email');
       console.log('Datos a enviar:', {
         nombre: formData.name,
         email: formData.email,
@@ -57,7 +57,7 @@ export default function Careers() {
         cvUrl: cvUrl,
       });
 
-      const emailResponse = await fetch('/.netlify/functions/send-cv-email', {
+      const emailResponse = await fetch('/api/send-cv-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
