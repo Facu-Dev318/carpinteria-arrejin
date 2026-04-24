@@ -2,27 +2,24 @@ import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export default async function handler(req: Request) {
-  const headers = {
-    'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Methods': 'POST, OPTIONS',
-    'Access-Control-Allow-Headers': 'Content-Type',
-  };
+export default async function handler(req: any, res: any) {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
   if (req.method === 'OPTIONS') {
-    return new Response('', { status: 200, headers });
+    return res.status(200).end();
   }
 
   if (req.method !== 'POST') {
-    return new Response(JSON.stringify({ error: 'Method not allowed' }), { status: 405, headers });
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
   try {
-    const body = await req.json();
-    const { nombre, email, telefono, mensaje, cvUrl } = body;
+    const { nombre, email, telefono, mensaje, cvUrl } = req.body;
 
     if (!nombre || !email || !telefono) {
-      return new Response(JSON.stringify({ error: 'Faltan campos requeridos' }), { status: 400, headers });
+      return res.status(400).json({ error: 'Faltan campos requeridos' });
     }
 
     const emailContent = `
@@ -43,14 +40,12 @@ export default async function handler(req: Request) {
     });
 
     if (result.error) {
-      return new Response(JSON.stringify({ error: 'Error al enviar el email', details: result.error }), { status: 500, headers });
+      return res.status(500).json({ error: 'Error al enviar el email', details: result.error });
     }
 
-    return new Response(JSON.stringify({ success: true, message: 'Email enviado correctamente' }), { status: 200, headers });
+    return res.status(200).json({ success: true, message: 'Email enviado correctamente' });
 
   } catch (error: any) {
-    return new Response(JSON.stringify({ error: 'Error al enviar el email', details: error.message }), { status: 500, headers });
+    return res.status(500).json({ error: 'Error al enviar el email', details: error.message });
   }
 }
-
-export const config = { runtime: 'edge' };
