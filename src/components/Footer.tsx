@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12 lg:gap-16">
           <div className="space-y-6 lg:col-span-1">
-            <Logo variant="light" className="h-20 lg:h-24 w-auto" />
+            <Logo variant="light" className="h-40 lg:h-48 w-auto" />
             <p className="text-xs font-light text-stone-400 leading-relaxed uppercase tracking-wider">
               Carpintería artesanal de alta calidad
             </p>
