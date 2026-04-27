@@ -176,15 +176,13 @@ export default function AdminUpload() {
               disabled={uploading}
               className="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-neutral-900 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              <option value="cocinas">Cocinas</option>
-              <option value="revestimientos">Revestimientos</option>
-              <option value="escaleras">Escaleras</option>
-              <option value="puertas">Puertas</option>
-              <option value="vanitory">Vanitory</option>
-              <option value="bibliotecas">Bibliotecas y repisas</option>
-              <option value="vestidor">Vestidor</option>
-              <option value="filosofia">Filosofía</option>
-              <option value="capacidad">Capacidad Productiva</option>
+             <option value="cocinas">Cocinas</option>
+<option value="revestimientos">Revestimientos</option>
+<option value="vanitorys">Vanitorys</option>
+<option value="bibliotecas">Bibliotecas y Repisas</option>
+<option value="puertas">Puertas</option>
+<option value="escaleras">Escaleras</option>
+<option value="cavas">Cavas</option>
             </select>
           </div>
 
